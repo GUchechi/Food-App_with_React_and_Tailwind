@@ -37,31 +37,31 @@ const Food = () => {
           <div className="flex justfiy-between flex-wrap">
             <button
               onClick={() => setFoods(data)}
-              className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white"
+              className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white hover:italic"
             >
               All
             </button>
             <button
               onClick={() => filterType("burger")}
-              className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white"
+              className="hover:italic m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white"
             >
               Burgers
             </button>
             <button
               onClick={() => filterType("pizza")}
-              className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white"
+              className="hover:italic m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white"
             >
               Pizza
             </button>
             <button
               onClick={() => filterType("salad")}
-              className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white"
+              className="hover:italic m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white"
             >
               Salads
             </button>
             <button
               onClick={() => filterType("chicken")}
-              className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white"
+              className="hover:italic m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white"
             >
               Chicken
             </button>
@@ -74,25 +74,25 @@ const Food = () => {
           <div className="flex justify-between max-w-[390px] w-full">
             <button
               onClick={() => filterPrice("$10")}
-              className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white"
+              className="hover:italic m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white"
             >
               $10
             </button>
             <button
               onClick={() => filterPrice("$20")}
-              className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white"
+              className="hover:italic m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white"
             >
               $20
             </button>
             <button
               onClick={() => filterPrice("$50")}
-              className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white"
+              className="hover:italic m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white"
             >
               $50
             </button>
             <button
               onClick={() => filterPrice("$100")}
-              className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white"
+              className="hover:italic m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white"
             >
               $100
             </button>
@@ -113,7 +113,7 @@ const Food = () => {
               className="w-full h-[200px] object-cover rounded-t-lg"
             />
             <div className="flex justify-between px-2 py-4">
-              <p className="font-bold">{item.name}</p>
+              <p className="font-bold mr-1">{item.name}</p>
               <p>
                 <span className="bg-orange-500 text-white p-1 rounded-full">
                   {item.price}
