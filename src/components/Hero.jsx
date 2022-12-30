@@ -1,4 +1,5 @@
 import React from "react";
+import Typewriter from "typewriter-effect";
 
 const Hero = () => {
   return (
@@ -11,7 +12,17 @@ const Hero = () => {
           </h1>
           <h1 className="px-4 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">
             {" "}
-            <span className="text-orange-500">Foods</span> Delivered
+            {/* <span className="text-orange-500">Foods</span> Delivered */}
+            <Typewriter
+            options={{
+              autoStart: true,
+              loop: true,
+              delay: 40,
+              strings: [
+                "Foods Delivered",
+              ],
+            }}
+          />
           </h1>
         </div>
         <img
