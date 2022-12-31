@@ -1,10 +1,24 @@
 import React from "react";
 import { categories } from "../data/data.js";
+import { motion } from "framer-motion";
+import { useScroll } from "./useScroll";
+import { categoryAnimation } from "../animation";
 
 const Category = () => {
-  console.log(categories);
+  const [element, controls] = useScroll();
+
   return (
-    <div className="max-w-[1640px] m-auto px-4 py-16">
+    <motion.div
+    ref={element}
+      variants={categoryAnimation}
+      animate={controls}
+      transition={{
+        delay: 0.03,
+        type: "tween",
+        duration: 0.8,
+      }}
+      className="max-w-[1640px] m-auto px-4 py-16"
+    >
       <h1 className="text-orange-600 font-bold text-4xl text-center mb-6">
         Top Rated Menu Items
       </h1>
@@ -20,7 +34,7 @@ const Category = () => {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
