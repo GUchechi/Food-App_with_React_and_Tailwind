@@ -10,13 +10,23 @@ import { BsFillCartFill, BsFillSaveFill } from "react-icons/bs";
 import { TbTruckDelivery } from "react-icons/tb";
 import { FaUserFriends, FaWallet } from "react-icons/fa";
 import { MdFavorite, MdHelp } from "react-icons/md";
+import { useScroll } from "./useScroll";
+import { navAnimation } from "../animation";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
+  const [element, controls] = useScroll();
   const [nav, setNav] = useState(false);
   return (
     <div className="max-w-[1640px] mx-auto flex justify-between items-center p-4">
       {/* Left side */}
-      <div className="flex items-center">
+      <motion.div
+        ref={element}
+        variants={navAnimation}
+        transition={{ delay: 0.1 }}
+        animate={controls}
+        className="flex items-center"
+      >
         <div className="cursor-pointer" onClick={() => setNav(!nav)}>
           <AiOutlineMenu size={30} className="text-[var(--appColor)]" />
         </div>
@@ -29,16 +39,20 @@ const Navbar = () => {
           </p>
           <p className="p-2 text-white font-bold">PICKUP</p>
         </div>
-      </div>
+      </motion.div>
       {/* Right Side Search */}
-      <div className="bg-[var(--appColor)] rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]">
+      <motion.div ref={element}
+        variants={navAnimation}
+        transition={{ delay: 0.1 }}
+        animate={controls}
+         className="bg-[var(--appColor)] rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]">
         <AiOutlineSearch size={25} className="text-[#fa8517]" />
         <input
           type="text"
           className="bg-transparent p-2 w-full focus:outline-none text-white"
           placeholder="Search foods"
         />
-      </div>
+      </motion.div>
       {/* Cart Button */}
       <button className="bg-[var(--appColor)] text-white hidden md:flex items-center py-2 rounded-full font-bold outline-none border-none">
         <BsFillCartFill size={20} className="mr-2 text-[#fa8517]" /> Cart
