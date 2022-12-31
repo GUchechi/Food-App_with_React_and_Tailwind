@@ -1,5 +1,6 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
+import Marquee from "react-fast-marquee";
 
 const Hero = () => {
   return (
@@ -14,15 +15,13 @@ const Hero = () => {
             {" "}
             {/* <span className="text-orange-500">Foods</span> Delivered */}
             <Typewriter
-            options={{
-              autoStart: true,
-              loop: true,
-              delay: 40,
-              strings: [
-                "Foods Delivered",
-              ],
-            }}
-          />
+              options={{
+                autoStart: true,
+                loop: true,
+                delay: 40,
+                strings: ["Foods Delivered"],
+              }}
+            />
           </h1>
         </div>
         <img
@@ -31,6 +30,37 @@ const Hero = () => {
           alt="/"
         />
       </div>
+      <section className="marquee-section">
+        <Marquee speed={60} gradient={false} pauseOnHover>
+          <div className="marquee-container">
+            <div className="marquee3k">
+              <h4>
+                {" "}
+                <span className="font-bold text-[var(--appColor)]">PIZZA</span>
+                <span className="font-bold text-orange-500">WAFFLE</span>
+                <span className="font-bold text-[var(--appColor)]">ICE-CREAM </span>
+                <span className="font-bold text-orange-500">MUSHROOM BURGER </span>{" "}
+              </h4>
+
+              <h4>
+                {" "}
+                <span className="font-bold text-[var(--appColor)]"> BACON </span>{" "}
+                <span className="font-bold text-orange-500">CHEESE BURGER</span>
+                <span className="font-bold text-[var(--appColor)]"> ICE-CREAM </span>
+                <span className="font-bold text-orange-500"> FETA </span>
+                
+              </h4>
+              <h4>
+                {" "}
+                <span className="font-bold text-[var(--appColor)]">BURGER</span>
+                <span className="font-bold text-orange-500">CHEESE</span>
+                <span className="font-bold text-[var(--appColor)]"> PIZZA </span>
+                <span className="font-bold text-orange-500"> WAFFLE </span>{" "}
+              </h4>
+            </div>
+          </div>
+        </Marquee>
+      </section>
     </div>
   );
 };

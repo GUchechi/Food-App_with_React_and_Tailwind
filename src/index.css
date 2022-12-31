@@ -33,3 +33,31 @@ body {
     @apply border border-black rounded-xl px-5 py-1;
   }
 }
+
+/* MARQUEE SECTION */
+
+.marquee-section {
+  width: 100%;
+  overflow: hidden;
+  padding-top:30px ;
+}
+
+.marquee-container {
+  width: 100%;
+}
+
+.marquee3k {
+  background-color: transparent;
+  height: 85px;
+  display: flex;
+  align-items: center;
+}
+
+.marquee3k h4 {
+  color: var(--yellow-theme-main-color);
+  font-size: 18px;
+}
+.marquee3k h4 span {
+  margin: 0 30px;
+}
+
