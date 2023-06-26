@@ -31,7 +31,7 @@ const Food = () => {
 
       {/* Filter Row */}
       <div className="flex flex-col lg:flex-row justify-between gap-6">
-        {/* Fliter Type */}
+        {/* Filter Type */}
         <div>
           <p className="font-bold text-gray-700">Filter Type</p>
           <div className="flex justify-between flex-wrap">
