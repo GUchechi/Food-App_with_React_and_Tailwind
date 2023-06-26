@@ -34,7 +34,7 @@ const Food = () => {
         {/* Fliter Type */}
         <div>
           <p className="font-bold text-gray-700">Filter Type</p>
-          <div className="flex justfiy-between flex-wrap">
+          <div className="flex justify-between flex-wrap">
             <button
               onClick={() => setFoods(data)}
               className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white hover:italic"
