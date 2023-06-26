@@ -1,4 +1,4 @@
-import React from "react";
+
 import { useScroll } from "./useScroll";
 import { motion } from "framer-motion";
 import { footerTextAnimation } from "../animation";

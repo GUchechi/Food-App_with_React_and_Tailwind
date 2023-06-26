@@ -1,4 +1,3 @@
-import React from "react";
 import { categories } from "../data/data.js";
 import { motion } from "framer-motion";
 import { useScroll } from "./useScroll";
